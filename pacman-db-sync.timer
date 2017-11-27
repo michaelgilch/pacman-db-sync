@@ -1,0 +1,10 @@
+[Unit]
+Description=Runs pacman-db-sync.service every hour
+
+[Timer]
+OnBootSec=1m
+OnUnitActiveSec=1h
+Unit=pacman-db-sync.service
+
+[Install]
+WantedBy=multi-user.target
