@@ -7,8 +7,7 @@
 # Only pulls https mirrors in US and ranks them.
 #
 # Michael Gilchrist (michaelgilch@gmail.com)
-
-curl -s "https://www.archlinux.org/mirrorlist/?country=US&protocol=https" > /tmp/mirrorlist
+curl -s "https://archlinux.org/mirrorlist/?country=US&protocol=https" > /tmp/mirrorlist
 sed -i 's/^#//' /tmp/mirrorlist
 rankmirrors /tmp/mirrorlist > /etc/pacman.d/mirrorlist
 rm /tmp/mirrorlist
